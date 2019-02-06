@@ -3,6 +3,7 @@ import styled, {ThemeProvider, injectGlobal} from 'styled-components';
 import Header from './Header';
 import Meta from '../components/Meta';
 
+// Theme
 const theme = {
     red: '#FF0000',
     black: '#393939',
@@ -24,6 +25,7 @@ const Inner = styled.div`
     padding: 2rem;
 `;
 
+// Global styles
 injectGlobal`
     @font-face {
         font-family: 'radnika_next';

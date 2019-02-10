@@ -3,17 +3,18 @@ import styled from 'styled-components';
 import Nav from './Nav';
 import NProgress from 'nprogress';
 import Router from 'next/router';
+import Cart from './Cart';
 
-// Listen to different events happening inside the Router to fire various NProgress API methods. 
+// Listen to different events happening inside the Router to fire various NProgress API methods.
 Router.onRouteChangeStart = () => {
     NProgress.start();
-}
+};
 Router.onRouteChangeComplete = () => {
     NProgress.done();
-}
+};
 Router.onRouteChangeError = () => {
     NProgress.done();
-}
+};
 
 const Logo = styled.h1`
     font-size: 4rem;
@@ -61,12 +62,12 @@ const Header = () => (
                     <a>Sick Fits</a>
                 </Link>
             </Logo>
-            <Nav/>
+            <Nav />
         </div>
         <div className="sub-bar">
             <p>Search</p>
         </div>
-        <div>Cart</div>
+        <Cart />
     </StyledHeader>
 );
 

@@ -6,6 +6,18 @@ const NavStyles = styled.ul`
     display: flex;
     justify-self: end;
     font-size: 2rem;
+    p {
+        padding: 1rem 3rem;
+        display: flex;
+        align-items: center;
+        position: relative;
+        text-transform: uppercase;
+        font-weight: 900;
+        font-size: 1em;
+        background: none;
+        border: 0;
+        color: ${props => props.theme.red};
+    }
     a,
     button {
         padding: 1rem 3rem;

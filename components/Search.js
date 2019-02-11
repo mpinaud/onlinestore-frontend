@@ -54,7 +54,7 @@ class AutoComplete extends React.Component {
             loading: false,
         });
     }, 350);
-    
+
     render() {
         resetIdCounter();
         return (

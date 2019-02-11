@@ -4,6 +4,7 @@ import Nav from './Nav';
 import NProgress from 'nprogress';
 import Router from 'next/router';
 import Cart from './Cart';
+import Search from './Search';
 
 // Listen to different events happening inside the Router to fire various NProgress API methods.
 Router.onRouteChangeStart = () => {
@@ -65,7 +66,7 @@ const Header = () => (
             <Nav />
         </div>
         <div className="sub-bar">
-            <p>Search</p>
+            <Search />
         </div>
         <Cart />
     </StyledHeader>

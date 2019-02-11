@@ -26,7 +26,7 @@ const USER_ORDERS_QUERY = gql`
     }
 `;
 
-const orderUl = styled.ul`
+const orderul = styled.ul`
     display: grid;
     grid-gap: 4rem;
     grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
@@ -39,11 +39,10 @@ class OrderList extends React.Component {
                 {({data: {orders}, loading, error}) => {
                     if (loading) return <p>loading...</p>;
                     if (error) return <Error erorr={error} />;
-                    console.log(orders);
                     return (
                         <div>
                             <h2>You have {orders.length} orders</h2>
-                            <orderUl>
+                            <orderul>
                                 {orders.map(order => (
                                     <OrderItemStyles key={order.id}>
                                         <Link
@@ -91,7 +90,7 @@ class OrderList extends React.Component {
                                         </Link>
                                     </OrderItemStyles>
                                 ))}
-                            </orderUl>
+                            </orderul>
                         </div>
                     );
                 }}
